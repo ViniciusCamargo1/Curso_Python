@@ -1,0 +1,5 @@
+numero1 = int(input('digite o numero 1:'))
+numero2 = int(input('digite o numero 2:'))
+print ('numero 1 é =',numero1)
+print ('numero 2 é =',numero2)
+print ( numero1, numero2)
