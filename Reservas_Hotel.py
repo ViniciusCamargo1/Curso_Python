@@ -1,26 +1,65 @@
-print('Bem vindo ao Hotel')
-numero_clientes  = list(range(1,3))
-quantos_clientes = int(input('Qual a quantidade de clientes ?'))
+dados = {
+'nomes':[],
+'idades':[],
+'quartos':["Simples", "Duplo" , "Luxo"],
+'valores':[100.0,150.0,250.0],
+}
 
-cliente_01 = (input('Digite seu nome:'))
-cliente_01 = int(input('Digite sua idade:'))
+quantidade_de_pessoas = int(input('Quantidade de Pessoas:'))
+valor_quartos= input('Escolha qual o quarto: Simples R$100 Duplo R$150 Luxo R$250')
+dias = 0
+valor_reserva = 0
 
-cliente_02 = (input('Digite seu nome:'))
-cliente_02 = int(input('Digite sua idade:'))
+if quantidade_de_pessoas == 1:
+    dados['nomes'].append(input('Digite  o nome: '))
+    dados['idades'].append(input('Digite  a Idade: '))
+    dias = int(input("Dias de estadia: "))
+    if valor_quartos == "simples":
+     valor_reserva = (dias * 100.00)*quantidade_de_pessoas
+     print ('O Valor da reserva é:',valor_reserva)
+    elif valor_quartos == "duplo":
+     valor_reserva = (dias * 150.00)*quantidade_de_pessoas
+     print ('O Valor da reserva é:',valor_reserva)
+    elif valor_quartos == "luxo":
+     valor_reserva = (dias * 250.00)*quantidade_de_pessoas
+     print ('O Valor da reserva é:',valor_reserva)
 
-cliente_03 = (input('Digite seu nome:'))
-cliente_03 = int(input('Digite sua idade:'))
+elif quantidade_de_pessoas == 2:
+    dados['nomes'].append(input('Digite  o nome da 1 pessoa: '))
+    dados['idades'].append(input('Digite  a Idade da 1 pessoa: '))    
+    dados['nomes'].append(input('Digite  o nome da 2 pessoa: '))
+    dados['idades'].append(input('Digite  a Idade da 2 pessoa: '))
+    dias = int(input("Dias de estadia: "))
+    if valor_quartos == "simples":
+     valor_reserva = (dias * 100.00)*quantidade_de_pessoas
+     print ('O Valor da reserva é:',valor_reserva)
+    elif valor_quartos == "duplo":
+     valor_reserva = (dias * 150.00)*quantidade_de_pessoas
+     print ('O Valor da reserva é:',valor_reserva)
+    elif valor_quartos == "luxo":
+     valor_reserva = (dias * 250.00)*quantidade_de_pessoas
+     print ('O Valor da reserva é:',valor_reserva)
 
-simples = "R$100"
-duplo = "R$150"
-luxo = "R$250"
+elif quantidade_de_pessoas == 3:
+    dados['nomes'].append(input('Digite  o nome da 1 pessoa: '))
+    dados['idades'].append(input('Digite  a Idade da 1 pessoa: '))    
+    dados['nomes'].append(input('Digite  o nome da 2 pessoa: '))
+    dados['idades'].append(input('Digite  a Idade da 2 pessoa: '))    
+    dados['nomes'].append(input('Digite  o nome da 3 pessoa: '))
+    dados['idades'].append(input('Digite  a Idade da 3 pessoa: '))    
+    dias = int(input("Dias de estadia: "))
+    if valor_quartos == "simples":
+     valor_reserva = (dias * 100.00)*quantidade_de_pessoas
+     print ('O Valor da reserva é:',valor_reserva)
+    elif valor_quartos == "duplo":
+     valor_reserva = (dias * 150.00)*quantidade_de_pessoas
+     print ('O Valor da reserva é:',valor_reserva)
+    elif valor_quartos == "luxo":
+     valor_reserva = (dias * 250.00)*quantidade_de_pessoas
+     print ('O Valor da reserva é:',valor_reserva)
 
-lista_diaria = (simples,duplo,luxo)
-lista_cliente01 = (input("Digite qual será o seu quarto:"))
-lista_cliente02 = (input("Digite qual será o seu quarto:"))
-lista_cliente03 = (input("Digite qual será o seu quarto:"))
+else:
+    print('Digite algo válido... ')
 
-dias = (input("Quantos dias de reserva?"))
-Valor_Total = (lista_cliente01)
 
 
