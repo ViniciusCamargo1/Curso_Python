@@ -38,15 +38,18 @@ match numero2:
      print("Numero menor que 10")
 
 print("Exercicio 5")
-idade = int(input('Digite sua idade: '))
+idade  =  int(input('idade: '))
+
 match idade:
-    case idade if idade <13:
-      print("faixa etária de criança")
-    case idade if idade > 14 and idade <17:
-      print("faixa etária de adolescente")
-    case idade if idade > 18 and idade <35:
-      print("faixa etária de jovem")
-    case idade if idade >=35 and idade <63:
-      print("faixa etária de Adulto")
+    case x if x >= 0 and x <=12:
+        print('Crianca')
+    case x if x >12 and x <= 17:
+        print('Adolescente')
+    case x if x >=18 and x <=35:
+        print('jovem')
+    case x if x >= 36 and x <64:
+        print('Adulto')
     case _:
-      print("Idoso")
+        print('Idoso ')                
+
+
